@@ -2,7 +2,7 @@ import { Request, Response, NextFunction, RequestHandler } from 'express';
 import Joi from 'joi';
 
 function validationMiddleware(schema: Joi.Schema): RequestHandler {
-  return async(
+  return async (
     req: Request,
     res: Response,
     next: NextFunction
@@ -25,7 +25,7 @@ function validationMiddleware(schema: Joi.Schema): RequestHandler {
       e.details.forEach((error: Joi.ValidationErrorItem) => {
         errors.push(error.message);
       });
-      res.status(400).send({ errors: errors })
+      res.status(400).send({ errors: errors });
     }
   };
 }
