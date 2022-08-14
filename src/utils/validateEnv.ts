@@ -8,7 +8,10 @@ function validateEnv(): void {
     MONGO_PASSWORD: str(),
     MONGO_PATH: str(),
     MONGO_USER: str(),
+    NOTES_APP_MONGODB_HOST: str(),
+    NOTES_APP_MONGODB_DATABASE: str(),
     PORT: port({ default: 3000 }),
+    JWT_SECRET: str()
   });
 }
 
